@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="screen active" id="start-screen">
+        <div class="start-icon">🧠</div>
+        <h1>Communication Systems Quiz</h1>
+        <p>Test your knowledge of modulation, broadcasting, and digital communication</p>
+        <div class="features">
+          <div class="feature">⏱️ 30s per question</div>
+          <div class="feature">📚 Detailed explanations</div>
+          <div class="feature">🏆 Track your high score</div>
+        </div>
+        <button id="start-btn">🚀 Start Quiz</button>
+      </div>
+
+      <div class="screen" id="quiz-screen">
+        <div class="quiz-header">
+          <div class="question-category" id="question-category">Category</div>
+          <h2 id="question-text">Question goes here</h2>
+          <div class="quiz-info">
+            <p>
+              Question <span id="current-question">1</span> of <span id="total-questions">5</span>
+            </p>
+            <p>Score: <span id="score">0</span></p>
+            <p>Time: <span id="timer">30</span>s</p>
+          </div>
+        </div>
+
+        <div id="answers-container" class="answers-container">
+          <!-- Answer buttons will be insterted here from our js code later at some point -->
+        </div>
+
+        <div class="progress-bar">
+          <div id="progress" class="progress"></div>
+        </div>
+      </div>
+
+      <div id="result-screen" class="screen">
+        <h1>Quiz Results</h1>
+        <div class="result-info">
+          <p>You scored <span id="final-score">0</span> out of <span id="max-score">5</span></p>
+          <p>High Score: <span id="high-score">0</span></p>
+          <div id="result-message">Good job!</div>
+        </div>
+        <button id="restart-btn">Restart Quiz</button>
+        <button id="review-btn">📚 Review Explanations</button>
+      </div>
+
+      <div id="explanation-screen" class="screen">
+        <div class="explanation-header">
+          <h1>📚 Question Explanations</h1>
+          <div class="explanation-nav">
+            <button id="prev-explanation-btn">← Previous</button>
+            <span id="explanation-counter">Question 1 of 10</span>
+            <button id="next-explanation-btn">Next →</button>
+          </div>
+        </div>
+        
+        <div class="explanation-content">
+          <div class="explanation-question-info">
+            <div class="explanation-category" id="explanation-category">Category</div>
+            <h2 id="explanation-question-text">Question text</h2>
+            <div class="explanation-answer-info">
+              <p><strong>Your Answer:</strong> <span id="user-answer">Answer</span></p>
+              <p><strong>Correct Answer:</strong> <span id="correct-answer">Answer</span></p>
+            </div>
+          </div>
+          
+          <div class="explanation-text-container">
+            <h3>Explanation:</h3>
+            <div id="explanation-text" class="explanation-text"></div>
+          </div>
+        </div>
+        
+        <div class="explanation-footer">
+          <button id="back-to-results-btn">← Back to Results</button>
+          <button id="finish-review-btn">Finish Review</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
